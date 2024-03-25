@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #ee8456;
+}
+body {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+button {
+  background: transparent;
+  color: red;
+  border: 0;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+}
+
+.inputBox input {
+  padding: 15px 20px;
+  outline: none;
+  background: transparent;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid#ee8456;
+  font-size: 1em;
+  width: 100%;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 15px 20px;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+  color: #ee8456;
+  letter-spacing: 0.1em;
+}
+
+.inputBox input:focus ~ span {
+  font-size: 0.7em;
+  transform: translateX(14px) translateY(-7.5px);
+  padding: 0 5px;
+  border-radius: 2px;
+  background: #212121;
+  letter-spacing: 0em;
+  border: 1px solid #ee8456;
+}
+
+main form .add-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 10px 0;
+  color: aquamarine;
+  font-size: 30px;
+}
+
+main ul {
+  list-style: none;
+  margin-top: 25px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #b0b0b03f;
+  border-radius: 14px;
+  gap: 10px;
+}
+main ul li .task-name {
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  flex-basis: 60%;
+  padding: 0 5px;
+}
+main ul li button.remove {
+  font-size: 13px;
+  color: maroon;
+}
+
+main button.clear {
+  display: block;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+main .task-icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  flex-basis: 40%;
+}
+
+main .edit-btn {
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+}
+main .save {
+  font-size: 15px;
+  color: white;
+}
